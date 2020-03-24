@@ -1,0 +1,46 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class gallerytab extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return gallerystate();
+  }
+
+}
+
+class gallerystate extends State{
+
+  List<String> getGrids(){
+    List<String>imagelist=['images/mash.jpg','images/mushfiq.jpg','images/riad.jpg','images/shakib.jpg','images/tamim.jpg','images/liton.jpg','images/shanto.jpg','images/soumya.png','images/mustafiz.png','images/miraz.jpg','images/rubel.png'];
+    return imagelist;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      body: Container(
+          child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3
+              ),
+              itemBuilder: (context,index){
+                return Container(
+                  child: Image.asset(getGrids()[index],fit: BoxFit.fitHeight),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.green,
+                        )
+                )
+                );
+
+              },itemCount: getGrids().length
+          )
+      )
+    );
+
+  }
+
+}
