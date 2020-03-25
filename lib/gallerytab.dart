@@ -27,20 +27,40 @@ class gallerystate extends State{
                   crossAxisCount: 3
               ),
               itemBuilder: (context,index){
-                return Container(
-                  child: Image.asset(getGrids()[index],fit: BoxFit.fitHeight),
+                return GestureDetector(child: Container(
+                    child: Image.asset(getGrids()[index],fit: BoxFit.fitHeight),
                     decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.green,
                         )
-                )
-                );
+                    )
+                ),onTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context){return showFullImage(getGrids()[index]);}));
+                },);
 
               },itemCount: getGrids().length
           )
       )
     );
 
+  }
+
+}
+
+class showFullImage extends StatelessWidget{
+  String image;
+
+  showFullImage(this.image);
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Container(
+        color: Colors.white,
+        child: Image.asset(image,fit: BoxFit.cover),
+      ),
+    );
   }
 
 }
