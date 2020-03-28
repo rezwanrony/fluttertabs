@@ -55,6 +55,7 @@ flutter:
     - images/mustafiz.png
     - images/rubel.png
     - images/shanto.jpg
+    - images/propic2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -68,11 +69,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
 #  fonts:
-#     - family: Schyler
+#     - family: Actor
 #       fonts:
-#         - asset: fonts/Schyler-Regular.ttf
-#         - asset: fonts/Schyler-Italic.ttf
-#           style: italic
+#         - asset: fonts/Actor-Regular.ttf
 #     - family: Trajan Pro
 #       fonts:
 #         - asset: fonts/TrajanPro.ttf

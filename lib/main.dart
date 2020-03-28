@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterlistdemo/gallerytab.dart';
 import 'package:flutterlistdemo/listtab.dart';
+import 'package:flutterlistdemo/signup.dart';
 import 'package:flutterlistdemo/tabscreen.dart';
 
 void main() => runApp(MyApp());
@@ -100,7 +101,9 @@ class _State extends State<LoginPage> {
                             style: TextStyle(fontSize: 15),
                           ),
                           onPressed: () {
-                            //signup screen
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return signup();
+                            }));
                           },
                         )
                       ],
